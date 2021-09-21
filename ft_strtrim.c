@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:52:26 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/20 17:22:23 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/21 19:20:02 by sdiez-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	start = 0;
 	while (ft_is_in_set(s1[start], set))
 		start++;
+	if (start == len)
+		return (ft_strdup(""));
 	end = len - 1;
 	while (ft_is_in_set(s1[end], set))
 		end--;

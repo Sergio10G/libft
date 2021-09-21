@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 17:11:35 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/20 15:51:21 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/21 20:10:50 by sdiez-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ size_t	ft_fill_temp(char *temp, unsigned int un, int sign)
 		temp[i] = '-';
 		i--;
 	}
-	return (12 - (i + 1));
+	return (12 - (i + 2));
 }
 
 char	*ft_fill_final_num(char *temp, size_t num_size)
