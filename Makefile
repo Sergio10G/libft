@@ -10,6 +10,8 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME		=	libft.a
+
 SRCS		=	ft_isalpha.c			\
 				ft_isdigit.c			\
 				ft_isalnum.c			\
@@ -56,12 +58,17 @@ SRCS_B		=	ft_lstnew_bonus.c		\
 				ft_lstiter_bonus.c		\
 				ft_lstmap_bonus.c		\
 
-OBJS		=
+OBJS		=	$(SRCS:.c=.o)
 
-OBJS_B		=
+OBJS_B		=	$(SRCS_B:.c=.o)
 
-GCC			=	gcc
+CC			=	gcc
 
-RM			=	rm -rf
+CFLAGS		=	-Wall -Werror -Wextra
 
-NAME		=	libft.a
+RM			=	rm -f
+
+COMP_LIB	=	ar rcs
+
+LIB		=	libft.h
+
