@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <sdiez-ga@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/13 13:50:43 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/14 14:56:55 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/22 17:04:52 by sdiez-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < len)

@@ -6,7 +6,7 @@
 #    By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/09/21 17:51:27 by sdiez-ga          #+#    #+#              #
-#    Updated: 2021/09/21 18:01:49 by sdiez-ga         ###   ########.fr        #
+#    Updated: 2021/09/22 16:49:04 by sdiez-ga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,6 @@ SRCS		=	ft_isalpha.c			\
 				ft_atoi.c				\
 				ft_calloc.c				\
 				ft_strdup.c				\
-				# Additional Functions #
 				ft_substr.c				\
 				ft_strjoin.c			\
 				ft_strtrim.c			\
@@ -70,5 +69,23 @@ RM			=	rm -f
 
 COMP_LIB	=	ar rcs
 
-HEADER		=	libft.h
+$(NAME)		:	$(OBJS)
+				$(COMP_LIB) $(NAME) $(OBJS)
 
+all			:	$(NAME)
+
+%.o			:	%.c
+				$(CC) $(CFLAGS) -c $< -o $@
+
+bonus		:	$(OBJS_B)
+				$(COMP_LIB) $(NAME) $(OBJS_B)
+
+clean		:
+				$(RM) $(OBJS) $(OBJS_B)
+
+fclean		:	clean
+				$(RM) $(NAME)
+
+re			:	fclean all
+
+.PHONY		:	all bonus clean fclean re

@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 15:52:05 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 19:32:28 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/22 16:27:41 by sdiez-ga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,12 +54,7 @@ char	**free_matrix(char **mat, size_t last_index)
 
 char	**ft_empty_matrix(void)
 {
-	char	**mat;
-
-	mat = (char **) ft_calloc(1, sizeof(char *));
-	if (!mat)
-		return (0);
-	return (mat);
+	return ((char **) ft_calloc(1, sizeof(char *)));
 }
 
 char	**ft_make_matrix(const char *s, char c, size_t wc)
@@ -67,23 +62,25 @@ char	**ft_make_matrix(const char *s, char c, size_t wc)
 	char	**mat;
 	size_t	i;
 	size_t	j;
+	size_t	w;
 
 	mat = ft_calloc(wc + 1, sizeof(char *));
 	if (!mat)
 		return (0);
 	i = 0;
 	j = 0;
+	w = 0;
 	while (i < wc && s[j])
 	{
-		while (*s == c)
-			s++;
-		j = 0;
-		while (s[j] && s[j] != c)
+		while (s[j] == c)
 			j++;
-		mat[i] = ft_substr(s, 0, j);
+		w = 0;
+		while (s[j + w] && s[j + w] != c)
+			w++;
+		mat[i] = ft_substr(s + j, 0, w);
 		if (!mat[i])
 			return (free_matrix(mat, i - 1));
-		s += j;
+		j += w;
 		i++;
 	}
 	return (mat);
