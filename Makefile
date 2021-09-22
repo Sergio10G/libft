@@ -70,5 +70,5 @@ RM			=	rm -f
 
 COMP_LIB	=	ar rcs
 
-LIB		=	libft.h
+HEADER		=	libft.h
 
