@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 15:52:05 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/23 18:06:49 by sergiodg         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:13:09 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,14 @@ static size_t	ft_count_words(const char *s, char c)
 
 static char	**free_matrix(char **mat, size_t last_index)
 {
-	while (last_index >= 0)
+	int	li;
+
+	li = (int) last_index;
+	while (li >= 0)
 	{
-		if (mat[last_index])
-			free(mat[last_index]);
-		last_index--;
+		if (mat[li])
+			free(mat[li]);
+		li--;
 	}
 	free(mat);
 	return (0);
