@@ -6,15 +6,13 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/16 15:52:26 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 19:20:02 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:08:16 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		ft_is_in_set(char c, char const *set);
-
-int	ft_is_in_set(char c, char const *set)
+static int	ft_is_in_set(char c, char const *set)
 {
 	size_t	i;
 

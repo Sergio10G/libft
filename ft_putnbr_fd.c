@@ -6,16 +6,13 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 11:23:54 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/20 16:56:09 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:05:40 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void		ft_write_to_file(char *temp, int fd);
-static size_t	ft_fill_temp(char *temp, unsigned int un, int sign);
-
-size_t	ft_fill_temp(char *temp, unsigned int un, int sign)
+static size_t	ft_fill_temp(char *temp, unsigned int un, int sign)
 {
 	size_t	i;
 
@@ -35,7 +32,7 @@ size_t	ft_fill_temp(char *temp, unsigned int un, int sign)
 	return (12 - (i + 1));
 }
 
-void	ft_write_to_file(char *temp, int fd)
+static void	ft_write_to_file(char *temp, int fd)
 {
 	int	i;
 

@@ -6,15 +6,13 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/15 11:35:50 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 20:14:54 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:03:56 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_isspace(char c);
-
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	return (c == '\t' || c == '\n' || c == '\v'
 		|| c == '\f' || c == '\r' || c == ' ');

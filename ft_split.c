@@ -6,18 +6,13 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 15:52:05 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/22 16:27:41 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 18:06:49 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(const char *s, char c);
-static char		**free_matrix(char **mat, size_t last_index);
-static char		**ft_empty_matrix(void);
-static char		**ft_make_matrix(const char *s, char c, size_t wc);
-
-size_t	ft_count_words(const char *s, char c)
+static size_t	ft_count_words(const char *s, char c)
 {
 	size_t	i;
 	size_t	count;
@@ -40,7 +35,7 @@ size_t	ft_count_words(const char *s, char c)
 	return (count);
 }
 
-char	**free_matrix(char **mat, size_t last_index)
+static char	**free_matrix(char **mat, size_t last_index)
 {
 	while (last_index >= 0)
 	{
@@ -52,12 +47,7 @@ char	**free_matrix(char **mat, size_t last_index)
 	return (0);
 }
 
-char	**ft_empty_matrix(void)
-{
-	return ((char **) ft_calloc(1, sizeof(char *)));
-}
-
-char	**ft_make_matrix(const char *s, char c, size_t wc)
+static char	**ft_make_matrix(const char *s, char c, size_t wc)
 {
 	char	**mat;
 	size_t	i;
@@ -91,6 +81,6 @@ char	**ft_split(const char *s, char c)
 	if (!s)
 		return (0);
 	if (!*s)
-		return (ft_empty_matrix());
+		return ((char **) ft_calloc(1, sizeof(char *)));
 	return (ft_make_matrix(s, c, ft_count_words(s, c)));
 }
