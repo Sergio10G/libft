@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 14:38:15 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 17:21:53 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:59:20 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		while (lst)
 		{
-			(f)(lst -> content);
-			lst = lst -> next;
+			(f)(lst->content);
+			lst = lst->next;
 		}
 	}
 }

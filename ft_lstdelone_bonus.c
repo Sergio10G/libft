@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:24:04 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 17:23:39 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:57:22 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst && del)
 	{
-		(del)(lst -> content);
+		(del)(lst->content);
 		free(lst);
 	}
 }

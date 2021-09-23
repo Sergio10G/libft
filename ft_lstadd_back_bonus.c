@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 13:01:00 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 17:17:06 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:55:29 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	if (*lst)
-		(ft_lstlast(*lst))-> next = new;
+		(ft_lstlast(*lst))->next = new;
 	else
 		*lst = new;
 }

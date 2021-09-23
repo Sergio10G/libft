@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 12:51:56 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 17:23:07 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:56:40 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (0);
 	size = 1;
-	while (lst -> next)
+	while (lst->next)
 	{
-		lst = lst -> next;
+		lst = lst->next;
 		size++;
 	}
 	return (size);

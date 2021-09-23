@@ -6,7 +6,7 @@
 /*   By: sdiez-ga <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/17 12:32:33 by sdiez-ga          #+#    #+#             */
-/*   Updated: 2021/09/21 17:23:24 by sdiez-ga         ###   ########.fr       */
+/*   Updated: 2021/09/23 17:57:14 by sergiodg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (lst && new)
 	{
-		new -> next = *lst;
+		new->next = *lst;
 		*lst = new;
 	}
 }
